@@ -23,6 +23,7 @@ extern NSString *majorAndMinor;
 @property(nonatomic) NSInteger count;
 @property(strong, nonatomic)ESTBeacon* indexString;
 
+-(void)beaconStart;
 // this function is used to post message: floorPlanId refers to floorplan id; room refers to which room u decides to record; count refers to the sum of rooms in current floorplan id.
 -(void)postMessage:(NSString *)floorPlanId room:(NSString *)roomName count:(NSInteger)count majorAndMinor:(NSString *) majorMinor distance: (NSString *)distanceString;
 // this function is used to obtain current room name 

@@ -19,9 +19,8 @@
 @synthesize majorAndMinor=_majorAndMinor;
 @synthesize indexString;
 
--(instancetype)init{
-    self = [super init];
-    if (self) {
+-(void)beaconStart{
+
         self.beaconManager = [[ESTBeaconManager alloc] init];
         self.beaconManager.delegate = self;
         self.beaconManager.avoidUnknownStateBeacons = YES;
@@ -34,8 +33,6 @@
         // when beacon ranged beaconManager:didRangeBeacons:inRegion: invoked
         [self.beaconManager startRangingBeaconsInRegion:region];
 
-    }
-    return self;
 }
 
 
